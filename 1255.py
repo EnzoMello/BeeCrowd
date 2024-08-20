@@ -4,16 +4,24 @@ def main():
     for caso in range(n):
         frase = input().lower()
         caracteres = {}
-        maior = str()
+        maior = 0
+        letra_ganhadora = ''
 
         for letra in frase:
             if letra.isalpha() and letra not in caracteres:
-                caracteres += frase.count(letra)
+                caracteres['{}'.format(letra)] = 0
+                valor = caracteres['{}'.format(letra)]
+                soma = valor + frase.count(letra) 
+                caracteres['{}'.format(letra)] += soma
+
 
         for letra in caracteres:
-            if letra > maior:
-                maior = caracteres[letra]
-       
-        print(maior)
+            if caracteres['{}'.format(letra)] > maior:
+                maior = caracteres['{}'.format(letra)]
+                letra_ganhadora = letra
+            elif caracteres['{}'.format(letra)] == maior:
+                letra_ganhadora += letra
+
+        print(letra_ganhadora)
             
 main()
