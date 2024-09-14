@@ -2,7 +2,6 @@
 
 def main():
     pauzinhos = [6,2, 5, 5, 4, 5, 6, 3, 7, 6,]
-
     # LEIO O VALOR N CORRESPONDENTE AO NÚMERO DE CASOS DE TESTE
     n = int(input())
 
