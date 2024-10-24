@@ -45,5 +45,7 @@ def operacao_na_area(matriz_,operacao):
         return soma
     else:
         return soma / contador
+    
+
 
 main()
